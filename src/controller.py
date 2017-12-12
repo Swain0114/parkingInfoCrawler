@@ -45,7 +45,7 @@ def insertMysql(cnx,query,data=''):
     return data
 
 
-gcp_server = 35.188.183.43
+gcp_server = "35.188.183.43"
 gcp_user = root
 gcp_password = 
 gcp_database = ParkingInfo
