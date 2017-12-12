@@ -45,10 +45,9 @@ def insertMysql(cnx,query,data=''):
     return data
 
 
-gcp_server_section = config['GCP_DB']
-gcp_server = gcp_server_section['GCP_DB_SERVER']
-gcp_user = gcp_server_section['GCP_DB_USER']
-gcp_password = gcp_server_section['GCP_DB_PASSWORD']
-gcp_database = gcp_server_section['GCP_DB_DATABASE_NAME']
+gcp_server = 35.188.183.43
+gcp_user = root
+gcp_password = 
+gcp_database = ParkingInfo
 #local_user,local_password,local_server,local_database
 gcp_cur_mysql = connectMysql(gcp_user,gcp_password,gcp_server,gcp_database) 
