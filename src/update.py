@@ -17,6 +17,6 @@ def timed_job():
 		# print(row)
 		query = "UPDATE ParkingInfo SET surplusSpace = '%s', update_dt = '%s' WHERE parkId = '%s'"%(row['surplusSpace'], now ,row['parkId'])
 		print(query)
-		msg = insertMysql(gcp_cur_mysql, query)
+		msg = insertMysql(lab_cur_mysql, query)
 
 sched.start()

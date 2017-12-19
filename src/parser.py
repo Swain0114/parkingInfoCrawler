@@ -1,4 +1,4 @@
-from connectdb import *
+from controller import *
 
 path = '/Users/swain/Desktop/software_engineering/database/parking_file/parking_file'
 # def writeToJsonFile(path, fileName, data):
@@ -44,7 +44,7 @@ for lot in data['parkingLots']:
 	seq = seq + 1
 	query = "INSERT INTO ParkingInfo(id,areaId,areaName,parkName,totalSpace,surplusSpace,payGuide,introduction,address,wgsX,wgsY,parkId) VALUES ('%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s')" %(seq,lot['areaId'],lot['areaName'],lot['parkName'],lot['totalSpace'],lot['surplusSpace'],result,lot['introduction'],lot['address'],lot['wgsX'],lot['wgsY'],lot['parkId'])
 	print(query)
-	msg = insertMysql(gcp_cur_mysql, query)
+	msg = insertMysql(lab_cur_mysql, query)
 	
 
 
