@@ -13,7 +13,7 @@ sched = BlockingScheduler()
 @sched.scheduled_job('interval', minutes=2)
 def timed_job():
 	# 因架設在heroku上，時區需要+8
-	now = datetime.datetime.now() + datetime.timedelta(hours=8) - datetime.timedelta(minutes=5)
+	now = datetime.datetime.now() + datetime.timedelta(hours=8)
 	now = now.strftime("%Y-%m-%d %H:%M:%S")
 	for row in data['parkingLots']:
 		# print(row)
