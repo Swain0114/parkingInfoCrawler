@@ -11,7 +11,7 @@ sched = BlockingScheduler()
 # pprint.pprint(data)
 # query = "SELECT * FROM ParkingInfo"
 # pprint.pprint(getMysqlData(gcp_cur_mysql,query))
-@sched.scheduled_job('interval', minutes=3)
+@sched.scheduled_job('interval', minutes=2)
 def timed_job():
 	for row in data['parkingLots']:
 		# print(row)
