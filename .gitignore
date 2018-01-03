@@ -7,3 +7,4 @@ updateTest.py
 *.python
 *.idea
 __pycache__/
+.gitignore
