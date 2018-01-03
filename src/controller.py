@@ -13,6 +13,7 @@ from apscheduler.schedulers.blocking import BlockingScheduler
 config = configparser.ConfigParser()
 config.read('/Users/swain/Desktop/software_engineering/database/config.ini')
 
+
 def connectMysql(user,password,host,database):
     config = {
       'user': user,
