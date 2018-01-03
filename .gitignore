@@ -1,0 +1,9 @@
+bin/
+include/
+lib/
+*.egg-info/
+*.json
+updateTest.py
+*.python
+*.idea
+__pycache__/
