@@ -11,7 +11,7 @@ from apscheduler.schedulers.blocking import BlockingScheduler
 
 
 config = configparser.ConfigParser()
-config.read('/Users/swain/Desktop/software_engineering/database/config.ini')
+config.read('../config/config.ini')
 
 
 def connectMysql(user,password,host,database):
@@ -46,16 +46,10 @@ def insertMysql(cnx,query,data=''):
     return data
 
 
-# gcp_server = "35.188.183.43"
-# gcp_user = "root"
-# gcp_password = ""
-# gcp_database = "ParkingInfo"
-# #local_user,local_password,local_server,local_database
-# gcp_cur_mysql = connectMysql(gcp_user,gcp_password,gcp_server,gcp_database) 
-
-
-lab_server = "140.115.87.109"
-lab_user = "swain0114"
-lab_password = "tony820114"
-lab_database = "ParkingInfo"
+lab_server_section = config['LAB_DB']
+lab_server = lab_server_section['LAB_SERVER']
+lab_user = lab_server_section['LAB_USER']
+lab_password = lab_server_section['LAB_PASSWORD']
+lab_database = lab_server_section['LAB_DATABASE_NAME']
+lab_cur_mysql = connectMSsql(lab_server,lab_user,lab_password,lab_database)
 

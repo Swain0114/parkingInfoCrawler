@@ -8,7 +8,6 @@ sched = BlockingScheduler()
 
 @sched.scheduled_job('interval', minutes=2)
 def timed_job():
-	lab_cur_mysql = connectMysql(lab_user,lab_password,lab_server,lab_database)
 	# 因架設在heroku上，時區需要+8
 	query = "SELECT parkId, avg(star) as avgStar FROM comment GROUP BY parkid"
 	star = getMysqlData(lab_cur_mysql,query)
